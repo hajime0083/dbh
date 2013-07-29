@@ -148,7 +148,7 @@
 
 	#header-wrapper
 	{
-		padding: 6em 0 6em 0;
+		padding: 3em 0 3em 0;
 	}
 
 		#header-wrapper:before
@@ -212,7 +212,7 @@
 			font-weight: 900;
 			font-size: 2.5em;
 			letter-spacing: -0.035em;
-			margin: 0 0 1.5em 0;
+			margin: 0 0 1em 0;
 		}
 
 /*********************************************************************************/

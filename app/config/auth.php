@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'eloquent',
+	'driver' => 'database',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -53,6 +53,7 @@ return array(
 	| be able to set the name of the table that holds the reset tokens.
 	|
 	*/
+	
 
 	'reminder' => array(
 
