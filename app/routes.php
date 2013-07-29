@@ -11,24 +11,34 @@
 |
 */
 
-// ログイン
-Route::post('/login', array('before' => 'csrf', function()
+// csrf
+Route::post('', array('before' => 'csrf'));
+
+
+Route::post('login', array('before' => 'csrf', function()
 {
 	$inputs = Input::only(array('email', 'password'));
 	if(Auth::attempt($inputs)){
-		return Redirect::to('admin/main');
+		return Redirect::to('/admin');
 	}else{
 		return Redirect::to('/login');
 	}
 }));
 
-// ログアウト
-Route::post('/logout', array('before' => 'csrf', function()
+Route::get('logout', function()
 {
 	Auth::logout();
-}));
+	return Redirect::to('/login');
+});
+
+Route::get('/', 'PublicController@index');
+Route::get('admin', 'AdminController@index');
+Route::get('login', 'AdminController@login');
 
 
+
+
+// @TODO 上手くいかないので後で
 // CSRF対策
 //Route::group(array('before' => 'csrf'), function()
 //{
@@ -67,8 +77,3 @@ Route::post('/logout', array('before' => 'csrf', function()
 //}));
 //Route::controller('/', 'PublicController');
 //Route::controller('admin', 'AdminController');
-
-Route::get('/', 'PublicController@index');
-Route::get('admin', 'AdminController@index');
-Route::get('login', 'AdminController@login');
-Route::get('admin/main', 'AdminController@main');

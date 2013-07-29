@@ -3,7 +3,7 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class Model_User extends Eloquent implements UserInterface, RemindableInterface {
 
 	/**
 	 * The database table used by the model.
@@ -40,7 +40,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->password;
 	}
-
+	
 	/**
 	 * Get the e-mail address where password reminders are sent.
 	 *
@@ -51,4 +51,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	/**
+	 * Get the role for the user.
+	 *
+	 * @return string
+	 */
+	public function getAuthRole()
+	{
+		return $this->role;
+	}
 }
