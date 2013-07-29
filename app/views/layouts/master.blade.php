@@ -11,15 +11,16 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/jquery.dropotron.js"></script>
-		<script src="/js/config.js"></script>
-		<script src="/js/skel.min.js"></script>
-		<script src="/js/skel-panels.min.js"></script>
+		<?php echo HTML::script('js/jquery.min.js'); ?>
+		<?php echo HTML::script('js/jquery.dropotron.js'); ?>
+		<?php echo HTML::script('js/config.js'); ?>
+		<?php echo HTML::script('js/skel.min.js'); ?>
+		<?php echo HTML::script('js/skel-panels.min.js'); ?>
+		<?php echo HTML::style('css/skel-noscript.css'); ?>
+		<?php echo HTML::style('css/style.css'); ?>
+		<?php echo HTML::style('css/style-desktop.css'); ?>
 		<noscript>
-			<link rel="stylesheet" href="/css/skel-noscript.css" />
-			<link rel="stylesheet" href="/css/style.css" />
-			<link rel="stylesheet" href="/css/style-desktop.css" />
+
 		</noscript>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 	</head>
